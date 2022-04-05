@@ -3,7 +3,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/hasan-almujtaba/vue3-ssg-starter)
 # Simple Blog
 
-[Vue 3 SSG starter](https://vue3-ssg-starter.vercel.app/) implementation
+[Vue 3 SSG starter](https://vue3-ssg.netlify.app) implementation
 
 ## Tools Used
 - Vite
