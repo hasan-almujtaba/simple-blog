@@ -27,17 +27,17 @@ const filteredArticle = computed<ArticleInterface>(() => {
 </script>
 
 <template>
-  <div class="container mx-auto p-10">
+  <div class="max-w-5xl mx-auto p-10">
     <div v-if="filteredArticle">
-      <div data-aos="fade-up">
+      <div>
         Posted by <span class="font-semibold text-red-600">{{ filteredArticle.writer }}</span>
-        - {{ filteredArticle.created_at }}
+        <span class="block md:inline md:ml-2">on {{ filteredArticle.created_at }}</span>
       </div>
-      <h1 data-aos="fade-up" class="text-2xl lg:text-3xl font-bold mb-5">
+      <h1 class="text-xl lg:text-3xl font-bold mb-5">
         {{ filteredArticle.title }}
       </h1>
-      <img data-aos="fade-up" :src="filteredArticle.imageUrl" :alt="filteredArticle.title" class="w-full h-52 lg:h-[450px] object-cover rounded-3xl mb-5">
-      <div class="leading-loose space-y-3" data-aos="fade-up">
+      <img :src="filteredArticle.imageUrl" :alt="filteredArticle.title" class="w-full h-52 lg:h-[450px] object-cover rounded-3xl mb-5">
+      <div class="leading-loose space-y-3">
         <p>
           {{ filteredArticle.desc }}
         </p>

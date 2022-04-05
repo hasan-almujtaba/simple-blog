@@ -23,7 +23,7 @@ const mobileNav = ref(false)
 </script>
 
 <template>
-  <div class="py-5 px-10 flex justify-between items-center">
+  <div class="py-5 px-10 flex justify-between items-center 2xl:px-80">
     <div class="text-3xl">
       <span class="font-light text-red-400">Simple</span><span class="font-bold text-red-600">Blog</span>
     </div>
@@ -55,7 +55,7 @@ const mobileNav = ref(false)
           leave-to-class="transform scale-95 opacity-0"
         >
           <menu-items
-            class="absolute right-0 w-56 mt-2 p-2 origin-top-right z-10 bg-white divide-y divide-gray-100 rounded-md shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="absolute right-0 w-56 mt-2 p-2 origin-top-right z-10 bg-white divide-y divide-gray-100 rounded-md shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
           >
             <menu-item v-for="(category, i) in categories" v-slot="{ active }" :key="i">
               <button
@@ -96,7 +96,7 @@ const mobileNav = ref(false)
             <transition-child as="template" enter="ease-in-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in-out duration-300" leave-from="opacity-100" leave-to="opacity-0">
               <DialogOverlay class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
             </transition-child>
-            <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-40">
+            <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-20">
               <transition-child as="template" enter="transform transition ease-in-out duration-300 sm:duration-700" enter-from="translate-x-full" enter-to="translate-x-0" leave="transform transition ease-in-out duration-300 sm:duration-700" leave-from="translate-x-0" leave-to="translate-x-full">
                 <div class="pointer-events-auto relative w-screen max-w-md">
                   <transition-child as="template" enter="ease-in-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in-out duration-300" leave-from="opacity-100" leave-to="opacity-0">
@@ -134,7 +134,7 @@ const mobileNav = ref(false)
                       </div>
                       <!-- Navigation -->
 
-                      <div class="absolute bottom-10 px-4 sm:px-6 space-y-3">
+                      <div class="absolute bottom-10 inset-x-0 px-4 sm:px-6 space-y-3">
                         <base-button variant="primary" class="w-full block">
                           Log in
                         </base-button>

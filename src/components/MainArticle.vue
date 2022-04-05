@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <router-link as="div" :to="`/article/${slug}`" class="relative bg-black/70 h-[430px] rounded-3xl overflow-hidden group" data-aos="fade-up">
+  <router-link as="div" :to="`/article/${slug}`" class="relative bg-black/70 h-[430px] rounded-3xl overflow-hidden group" >
     <img :src="props.image" class="h-full w-full object-cover">
     <div class="absolute inset-0 bg-black/70 transition group-hover:bg-slate-600/70 text-white p-5 flex items-end">
       <div>
